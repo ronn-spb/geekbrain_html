@@ -222,8 +222,8 @@ nav li:hover .mega-menu {
 .banner {
     background-color: #e8e8e8;
     height: 613px;
-    background-image: url("img/baner_img.png");
-    background-position: right;
+    background-image: url("img/b_img.png");
+    background-position: center;
     background-repeat: no-repeat;
     margin-bottom: 98px;
 
@@ -469,7 +469,7 @@ featuret_items_cpt h2 {
     height: 438px;
     background-color: #f2f2f2;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-position: center;
     margin-bottom: 103px;
 }
 
