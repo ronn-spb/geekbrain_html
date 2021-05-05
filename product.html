@@ -260,10 +260,79 @@
 
             </div>
             <div class="catalog_body">
-                <div class="filter">
-                    <div class="filter_trending"></div>
-                    <div class="filter_size"></div>
-                    <div class="filter_price"></div>
+                <div class="filter flex flex_btw">
+                    <div class="filter_trending flex flex_colum">
+                        <div class="filter_cpt">Trending now</div>
+                        <div class="filter_trnd_block">
+                            <div class="filter_trnd_first flex flex_btw">
+                                <div class="filter_trnd_nname">Bohemian</div>
+                                <div class="filter_trnd_decor"></div>
+                                <div class="filter_trnd_nname">Floral</div>
+                                <div class="filter_trnd_decor"></div>
+                                <div class="filter_trnd_nname">Lace</div>
+                            </div>
+                            <div class="flex flex_btw">
+                                <div class="filter_trnd_nname">Floral</div>
+                                <div class="filter_trnd_decor"></div>
+                                <div class="filter_trnd_nname">Lace</div>
+                                <div class="filter_trnd_decor"></div>
+                                <div class="filter_trnd_nname">Bohemian</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter_size">
+                        <div class="filter_cpt">Size</div>
+                        <div class="filter_size_block">
+                            <div class="filter_size_item">
+                                <input class="filter_checkbox" type="checkbox" name="" id="c_XXS">
+                                <label for="c_XXS">XXS</label>
+                            </div>
+                            <div class="filter_size_item">
+                                <input class="filter_checkbox" type="checkbox" name="" id="c_XS">
+                                <label for="c_XS">XS</label>
+                            </div>
+                            <div class="filter_size_item">
+                                <input class="filter_checkbox" type="checkbox" name="" id="c_S">
+                                <label for="c_S">S</label>
+                            </div>
+                            <div class="filter_size_item">
+                                <input class="filter_checkbox" type="checkbox" name="" id="c_M">
+                                <label for="c_M">M</label>
+                            </div>
+                            <div class="filter_size_item">
+                                <input class="filter_checkbox" type="checkbox" name="" id="c_L">
+                                <label for="c_L">L</label>
+                            </div>
+                            <div class="filter_size_item">
+                                <input class="filter_checkbox" type="checkbox" name="" id="c_XL">
+                                <label for="c_XL">XL</label>
+                            </div>
+                            <div class="filter_size_item">
+                                <input class="filter_checkbox" type="checkbox" name="" id="c_XXL">
+                                <label for="c_XXL">XXL</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter_price">
+                        <div class="filter_cpt">pRICE</div>
+                        <div class="filter_price_slider">
+                            <div class="filter_multi_range_slider">
+                                <input type="range" id="input-left" min="0" max="100" value="25">
+                                <input type="range" id="input-right" min="0" max="100" value="75">
+
+                                <div class="filter_slider">
+                                    <div class="filter_track"></div>
+                                    <div class="filter_range"></div>
+                                    <div class="filter_thumb left"></div>
+                                    <div class="filter_thumb right"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter_price_range flex flex_btw">
+                            <div>$52</div>
+                            <div>$400</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="sort flex">
                     <div class="sortby flex">
@@ -599,7 +668,71 @@
 
 
     </footer>
+    <script type="text/javascript">
+        var inputLeft = document.getElementById("input-left");
+        var inputRight = document.getElementById("input-right");
 
+        var thumbLeft = document.querySelector(".filter_slider > .filter_thumb.left");
+        var thumbRight = document.querySelector(".filter_slider > .filter_thumb.right");
+        var range = document.querySelector(".filter_slider > .filter_range");
+
+        function setLeftValue() {
+            var _this = inputLeft,
+                min = parseInt(_this.min),
+                max = parseInt(_this.max);
+
+            _this.value = Math.min(parseInt(_this.value), parseInt(inputRight.value) - 1);
+
+            var percent = ((_this.value - min) / (max - min)) * 100;
+
+            thumbLeft.style.left = percent + "%";
+            range.style.left = percent + "%";
+        }
+        setLeftValue();
+
+        function setRightValue() {
+            var _this = inputRight,
+                min = parseInt(_this.min),
+                max = parseInt(_this.max);
+
+            _this.value = Math.max(parseInt(_this.value), parseInt(inputLeft.value) + 1);
+
+            var percent = ((_this.value - min) / (max - min)) * 100;
+
+            thumbRight.style.right = (100 - percent) + "%";
+            range.style.right = (100 - percent) + "%";
+        }
+        setRightValue();
+
+        inputLeft.addEventListener("input", setLeftValue);
+        inputRight.addEventListener("input", setRightValue);
+
+        inputLeft.addEventListener("mouseover", function () {
+            thumbLeft.classList.add("hover");
+        });
+        inputLeft.addEventListener("mouseout", function () {
+            thumbLeft.classList.remove("hover");
+        });
+        inputLeft.addEventListener("mousedown", function () {
+            thumbLeft.classList.add("active");
+        });
+        inputLeft.addEventListener("mouseup", function () {
+            thumbLeft.classList.remove("active");
+        });
+
+        inputRight.addEventListener("mouseover", function () {
+            thumbRight.classList.add("hover");
+        });
+        inputRight.addEventListener("mouseout", function () {
+            thumbRight.classList.remove("hover");
+        });
+        inputRight.addEventListener("mousedown", function () {
+            thumbRight.classList.add("active");
+        });
+        inputRight.addEventListener("mouseup", function () {
+            thumbRight.classList.remove("active");
+        });
+    </script>
 
 
 
