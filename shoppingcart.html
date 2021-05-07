@@ -67,6 +67,7 @@
             <div class="header_right flex">
                 <div class="cart_list">
                     <img class="cart_btn" src="img/cart.png" alt="cart">
+                    <div class="live_cart">3</div>
                     <div class="cart_checkout  flex_colum">
                         <div class="cart_checkout_decor"></div>
                         <div class="cart_item flex flex_btw">
@@ -615,13 +616,13 @@
                             Shipping Adress
                         </div>
                         <div class="chk_country">
-                            <input type="text">
+                            <input class="chk_input" type="text">
                         </div>
                         <div class="chk_state">
-                            <input type="text">
+                            <input class="chk_input" type="text" placeholder="State">
                         </div>
                         <div class="chk_zipcode">
-                            <input type="text">
+                            <input class="chk_input" type="text" placeholder="Postcode / Zip">
                         </div>
                     </div>
 
@@ -629,13 +630,17 @@
                         <div class="chk_cpt">
                             coupon discount
                         </div>
+                        <div class="chk_text">Enter your coupon code if you have one</div>
+                        <input class="chk_input" type="text" placeholder="cupon">
+                        <div class="apply_cpupon">Apply coupon</div>
                     </div>
                     <div class="chk_checkout">
                         <div class="chk_checkout_subtotal">Sub total $900</div>
-                        <div class="chk_checkout_total"> GRAND TOTAL $900</div>
+                        <div class="chk_checkout_total"> GRAND TOTAL <span class="red_text">$900</span> </div>
                         <div class="chk_checkout_btn">proceed to checkout</div>
                     </div>
                 </div>
+                <div class="get_qute_btn">get a quote</div>
             </div>
 
         </div>
