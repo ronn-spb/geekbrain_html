@@ -68,7 +68,7 @@ details summary::marker {
     display: none;
 }
 
-nav {
+.main_nav {
     padding-bottom: 12px;
 }
 
@@ -81,13 +81,17 @@ nav {
     left: -5px;
 }
 
-nav li {
+.main_nav li {
     padding: 15px;
     position: relative;
 }
 
-nav li a {
+.main_nav li a {
     color: #222222;
+}
+
+.main_nav .main_menu_link:hover>a {
+    color: #f16d7f;
 }
 
 .main_menu_link:hover .mega-menu {
@@ -148,6 +152,10 @@ nav li a {
     /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08); */
     z-index: -10;
     transform: rotate(45deg);
+}
+
+.mega_menu_link:hover {
+    color: #f16d7f;
 }
 
 
@@ -237,6 +245,7 @@ nav li a {
     background-color: #ffffff;
     padding-left: 16px;
     color: #a4a4a4;
+    outline: none;
 }
 
 .header_block {
@@ -599,6 +608,7 @@ nav li a {
     width: 282px;
     border: 0px;
     padding-left: 28px;
+    outline: none;
 }
 
 .subscrible_content {
@@ -652,6 +662,10 @@ nav li a {
     letter-spacing: 0.4px;
     width: 154px;
     /* line-height: 42px; */
+}
+
+.footer_link:hover {
+    color: #f16d7f;
 }
 
 .ftr_menu_item {
@@ -718,7 +732,7 @@ nav li a {
     text-transform: uppercase;
 }
 
-.browse_menu a {
+.browse_menu_link {
     color: #4f4f4f;
     font-size: 14px;
     font-weight: 400;
@@ -726,6 +740,10 @@ nav li a {
     line-height: 28px;
     padding-left: 5px;
     text-transform: none;
+}
+
+.browse_menu_link:hover {
+    color: #f16d7f;
 }
 
 .browse_cpt {
@@ -1433,6 +1451,8 @@ input[type=range]::-moz-range-thumb {
     height: 777px;
     border: 1px solid #eaeaea;
     background-color: #f7f7f7;
+    padding-bottom: 47px;
+    box-sizing: border-box;
 }
 
 .product_photo {
@@ -1587,7 +1607,7 @@ input[type=range]::-moz-range-thumb {
     height: 35px;
     padding-left: 14px;
     box-sizing: border-box;
-
+    outline: none;
 }
 
 .product_add_cart_btn {
@@ -1686,6 +1706,7 @@ input[type=range]::-moz-range-thumb {
     text-align: center;
     color: #656565;
     font-weight: 400;
+    outline: none;
 
 }
 
@@ -1827,6 +1848,7 @@ input[type=range]::-moz-range-thumb {
     font-size: 13px;
     font-weight: 300;
     padding-left: 17px;
+    outline: none;
 }
 
 .chk_text {
