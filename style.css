@@ -1961,3 +1961,11 @@ input[type=range]::-moz-range-thumb {
     font-weight: 300;
     margin-bottom: 24px;
 }
+
+.shiiping_addres_block_content {
+    padding: 35px 39px;
+}
+
+.chk_right {
+    width: 390px;
+}
