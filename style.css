@@ -56,8 +56,9 @@ body {
 .cart_btn {
     height: 32px;
     margin-top: 6px;
-
+    padding: 3px;
 }
+
 
 details summary {
     list-style: none;
@@ -81,6 +82,16 @@ details summary::marker {
     left: -5px;
 }
 
+.nav_women_decor {
+    height: 3px;
+    background-color: red;
+    width: 75px;
+    position: absolute;
+    top: 58px;
+    left: 7px;
+}
+
+
 .main_nav li {
     padding: 15px;
     position: relative;
@@ -96,10 +107,14 @@ details summary::marker {
 
 .main_menu_link:hover .mega-menu {
     display: block;
+    opacity: 100%;
+    transition: opacity ease 0.5s;
 }
 
 .main_menu_link:hover .mega-menu_last {
     display: block;
+    opacity: 100%;
+    transition: opacity ease 0.5s;
 }
 
 .mega-menu {
@@ -116,6 +131,7 @@ details summary::marker {
     padding: 21px;
     text-transform: none;
     left: -10px;
+    /* opacity: 0%; */
 }
 
 .mega-menu_last {
@@ -132,6 +148,7 @@ details summary::marker {
     padding: 21px;
     text-transform: none;
     left: -200px;
+    opacity: 0;
 }
 
 .mega-menu_last::after {
@@ -307,8 +324,7 @@ details summary::marker {
     background-position: center;
     background-repeat: no-repeat;
     margin-bottom: 98px;
-
-
+    background-position-y: -51px;
 }
 
 .banner_content {
@@ -625,8 +641,16 @@ details summary::marker {
     border-radius: 0 23px 23px 0;
     background-color: #f16d7f;
     padding: 0 21px;
-    border: 0px;
+    border: 1px transparent;
     color: #ffffff;
+}
+
+.subscr_btn:hover {
+    background-color: #fff;
+    color: #f16d7f;
+    border-color: #f16d7f;
+    border: 1px solid;
+    box-sizing: border-box;
 }
 
 .footer {
@@ -710,11 +734,14 @@ details summary::marker {
     box-sizing: border-box;
     margin-left: 6px;
     color: #b2b2b2;
+
 }
 
 .socmedia i:hover {
     color: #f7f7f8;
     background-color: #f16d7f;
+    transform: rotate(360deg);
+    transition: ease 0.4s transform;
 }
 
 .browse_menu {
@@ -869,6 +896,10 @@ details summary::marker {
 
 }
 
+.cart_list:hover .cart_btn {
+    transform: scale(1.1);
+}
+
 .cart_item_stars {
     color: #e4af48;
     font-size: 12px;
@@ -886,8 +917,11 @@ details summary::marker {
 
 .cart_delete_btn {
     font-size: 16px;
-
     font-weight: 400;
+}
+
+.cart_delete_btn:hover i {
+    transform: scale(1.1);
 }
 
 .cart_total {
@@ -1014,6 +1048,15 @@ details summary::marker {
     text-transform: uppercase;
 }
 
+.page_path_link {
+    color: #636363;
+
+}
+
+.page_path_link:hover {
+    color: #f16d7f;
+}
+
 .catalog {
     margin-top: 71px;
 }
@@ -1112,9 +1155,9 @@ details summary::marker {
     background-color: #ffffff;
     font-size: 16px;
     font-weight: bold;
-
     padding: 9px 16px;
 }
+
 
 .catalog_pg_nav ul {
     list-style: none;
@@ -1131,6 +1174,10 @@ details summary::marker {
     line-height: 26px;
     text-decoration: none;
     color: #c4c4c4;
+}
+
+.catalog_pg_nav li>a:hover {
+    color: #f16d7f;
 }
 
 .dots,
@@ -1154,6 +1201,54 @@ details summary::marker {
 .sort_cpt,
 .sort_value {
     padding: 4px 10px;
+}
+
+.sort_details,
+.show_details {
+    position: relative;
+
+}
+
+.sort_details summary::after,
+.show_details summary::after {
+    content: '\25BC';
+    padding-right: 0.5em;
+    color: #838383;
+    font-size: 12px;
+    position: absolute;
+    top: 7px;
+    right: -33px;
+}
+
+.sort_details[open]>summary::after,
+.show_details[open]>summary::after {
+    content: '\25B2';
+    font-size: 12px;
+    position: absolute;
+    top: 6px;
+    right: -33px;
+}
+
+
+.sort_value_sel {
+    position: absolute;
+    border: 1px solid #ebebeb;
+    background-color: #ffffff;
+    left: 10px;
+    top: 25px;
+    padding: 10px 10px 0 10px;
+    z-index: 5;
+}
+
+.sort_value_item,
+.show_value_item {
+    margin-bottom: 10px;
+}
+
+.sort_value_item:hover,
+.show_value_item:hover {
+    color: #ef5b70;
+    ;
 }
 
 .show_cpt,
@@ -1199,6 +1294,15 @@ details summary::marker {
 .tree_list_item {
     padding-left: 17px;
     padding-bottom: 16px;
+
+}
+
+.tree_list_item:hover a {
+    color: #ef5b70;
+
+}
+
+.tree_list_item a {
     color: #6f6e6e;
     font-size: 14px;
     font-weight: 400;
