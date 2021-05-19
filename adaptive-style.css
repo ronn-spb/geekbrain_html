@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("http://fonts.cdnfonts.com/css/arial-mt");
 * {
   padding: 0;
   margin: 0;
@@ -26,7 +27,7 @@ body a {
   font-size: 11px;
   font-weight: 400;
   text-transform: uppercase;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
 }
 
 .flex {
@@ -101,7 +102,7 @@ body a {
   font-size: 44px;
   font-weight: 700;
   line-height: 40px;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   text-transform: uppercase;
 }
 
@@ -147,7 +148,7 @@ body a {
   color: #555555;
   font-size: 30px;
   font-weight: 700;
-  font-family: 'Cousine', monospace;
+  font-family: "Cousine", monospace;
   text-transform: uppercase;
   margin-bottom: 19px;
 }
@@ -159,7 +160,7 @@ body a {
   font-weight: 800;
   line-height: 80px;
   letter-spacing: normal;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   text-transform: uppercase;
   margin-bottom: 18px;
 }
@@ -168,7 +169,7 @@ body a {
   color: #4c4c4c;
   font-size: 35px;
   font-weight: 700;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   text-transform: uppercase;
   margin-bottom: 29px;
 }
@@ -178,7 +179,7 @@ body a {
   font-size: 14px;
   font-weight: 700;
   line-height: 21.15px;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   text-transform: uppercase;
 }
 
@@ -237,11 +238,8 @@ body a {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 3%;
-}
-
-.promo-content__item {
-  margin-bottom: 3%;
+  grid-column-gap: 30px;
+  grid-row-gap: 26px;
 }
 
 .promo-content__img {
@@ -273,7 +271,7 @@ body a {
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
 }
 
 .product-menu_item_selected {
@@ -298,13 +296,208 @@ body a {
   color: #444444;
   font-size: 13px;
   font-weight: 400;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
 }
 
 .products-list__price {
   color: #222222;
   font-size: 15px;
   font-weight: 700;
-  font-family: 'Cousine', monospace;
+  font-family: "Cousine", monospace;
+}
+
+.show-more-block-content {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.show-more-block-content__decor {
+  width: 520px;
+  height: 1px;
+  background-color: #dddddd;
+}
+
+.show-more-block-content__link {
+  color: #555555;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  font-family: "Merriweather Sans", sans-serif;
+  text-transform: uppercase;
+  padding: 0 20px 0 20px;
+}
+
+.show-more-block {
+  margin-bottom: 120px;
+}
+
+.footer {
+  background-color: #1f1f1f;
+  padding-top: 91px;
+}
+
+.footer__h3 {
+  color: #b6b6b6;
+  font-size: 17px;
+  font-weight: 400;
+  font-family: "Cousine", monospace;
+  text-transform: uppercase;
+  padding-bottom: 34px;
+}
+
+.footer-top-col1 {
+  width: 38%;
+}
+
+.footer-top-col2 {
+  width: 30%;
+}
+
+.about-shop {
+  margin-bottom: 121px;
+}
+
+.about-shop__text {
+  color: #888888;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 14px;
+  line-height: 20px;
+  font-family: "Arial MT", sans-serif;
+}
+
+.about-shop__link {
+  color: #b6b6b6;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.about-shop__img {
+  margin-right: 19px;
+}
+
+.from-blog-bottom {
+  margin-bottom: 120px;
+}
+
+.from-blog-bottom__text {
+  color: #999999;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Cousine", monospace;
+}
+
+.from-blog-bottom__item {
+  width: 205px;
+}
+
+.from-blog-bottom__img {
+  margin-bottom: 20px;
+}
+
+.quik-contact {
+  margin-bottom: 150px;
+}
+
+.quik-contact__input {
+  border: 1px solid #666666;
+  background-color: #2a2a2a;
+  color: #888888;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: "Cousine", monospace;
+  padding: 8px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.quik-contact__button {
+  color: #aeaeae;
+  background-color: #1f1f1f;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Merriweather Sans", sans-serif;
+  border: 0;
+}
+
+.subscrib__input {
+  border: 1px solid;
+  border-right: 0;
+  border-color: #666666;
+  background-color: #2a2a2a;
+  color: #888888;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: "Cousine", monospace;
+  padding: 8px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+._sbuscr-submit {
+  border-left: 0;
+  border-right: 1px solid;
+  width: 12px;
+}
+
+._textarea {
+  resize: none;
+}
+
+.quik-contact-map {
+  margin-right: 20px;
+}
+
+._messagebox {
+  height: 116px;
+}
+
+.facebook__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.navigation__link-list {
+  list-style: none;
+}
+
+@media (max-width: 1024px) {
+  .products-list #item8 {
+    display: none;
+  }
+  .products-list #item7 {
+    display: none;
+  }
+  .products-list {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .promo-content {
+    grid-column-gap: 1%;
+    grid-row-gap: 16px;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .products-list {
+    padding-left: 2%;
+    padding-right: 2%;
+    grid-gap: 2%;
+  }
 }
 /*# sourceMappingURL=adaptive-style.css.map */
