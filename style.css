@@ -641,7 +641,7 @@ details summary::marker {
     border-radius: 0 23px 23px 0;
     background-color: #f16d7f;
     padding: 0 21px;
-    border: 1px transparent;
+    border: 1px transparent solid;
     color: #ffffff;
 }
 

@@ -426,6 +426,7 @@ body a {
   text-transform: uppercase;
   font-family: "Merriweather Sans", sans-serif;
   border: 0;
+  cursor: pointer;
 }
 
 .subscrib__input {
@@ -475,6 +476,35 @@ body a {
 
 .navigation__link-list {
   list-style: none;
+}
+
+.most-favorite {
+  margin-bottom: 121px;
+}
+
+.most-favorite__item {
+  padding: 5px;
+}
+
+.most-favorite__item-text {
+  color: #888888;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.most-favorite__item-price {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  font-family: "Cousine", monospace;
+}
+
+.most-favorite__img {
+  width: 100%;
 }
 
 @media (max-width: 1024px) {
